@@ -1,20 +1,12 @@
 from selenium.webdriver.common.by import By
-from behave import given, when, then
+from behave import then
 from time import sleep
 
-SEARCH_INPUT = (By.ID, 'search')
+
 SEARCH_RESULT_HEADER = (By.XPATH, "//div[@data-test='resultsHeading']")
 LISTINGS = (By.CSS_SELECTOR, "[data-test='@web/site-top-of-funnel/ProductCardWrapper']")
 PRODUCT_TITLE = (By.CSS_SELECTOR, "[data-test='product-title']")
 PRODUCT_IMG = (By.CSS_SELECTOR, "[class*='ProductCardImage']")
-SEARCH_BTN = (By.XPATH, "//button[@data-test='@web/Search/SearchButton']")
-
-@when('Search for {item}')
-def search_product(context, item):
-   context.driver.find_element(*SEARCH_INPUT).send_keys(item)
-   context.driver.find_element(*SEARCH_BTN).click()
-
-   sleep(3)
 
 
 @then('Verify search results are shown for {expected_item}')

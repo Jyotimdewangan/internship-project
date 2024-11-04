@@ -1,6 +1,11 @@
 # Created by jyoti at 7/14/2024
-Feature: # Enter feature name here
-  # Enter feature description here
+Feature: Target sign in feature
 
-  Scenario: # Enter scenario name here
+
+  Scenario: User can login to Target sign in page
+    Given Open Target sign in page
+    When Click Sign In
+    And From right side navigation menu, click Sign In
+    Then Verify Sign In form opened
+
     # Enter steps here

@@ -28,4 +28,5 @@ Feature: Search tests
     When Search for AirPods (3rd Generation)
     Then Verify that every product has a name and an image
 
-git
+
+
